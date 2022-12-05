@@ -1,4 +1,4 @@
-import DetalleProductoCategoria from './DetalleProductoCategoria';
+import DetalleProductoCategoria from './DetalleProductoCategoria'
 import { useEffect, useState } from 'react';
 import { getListadoById } from '../ArrayDeProductos/ArrayDeProductos';
 
