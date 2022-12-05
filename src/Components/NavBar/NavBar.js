@@ -5,7 +5,7 @@ import './NavBar.css'
 import ContenedorProductos from '../ContenedorProductos/ContenedorProductos';
 import ProductoCategoria from '../ProductoCategoria/ProductoCategoria';
 import Home from '../Home/Home'
-
+import {BrowserRouter} from 'react-router-dom'
 
 
 const NavBar = () => {
@@ -45,9 +45,9 @@ const NavBar = () => {
 
 return (
     <div className = "section">
-            <Home /> Home
-            <ContenedorProductos />Listado Productos
-            <ProductoCategoria />Listado Categorias
+        <button>Home</button>
+        <button>Listado Productos</button>
+        <button>Categoria Productos</button>
 
     </div>
         )
