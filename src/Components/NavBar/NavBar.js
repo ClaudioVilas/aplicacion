@@ -1,14 +1,17 @@
 import './NavBar.css'
 // import Links from '../Links/Links'
-import {useEffect, useState} from 'react'
+// import {useEffect, useState} from 'react'
 // import ContadorClick from '../ContadorClicks/ContadorClicks'
+import ContenedorProductos from '../ContenedorProductos/ContenedorProductos';
+import ProductoCategoria from '../ProductoCategoria/ProductoCategoria';
+import Home from '../Home/Home'
 
 
 
 const NavBar = () => {
 
-useEffect (() => {
-    return () => console.log ('mostrar')}, [])
+// useEffect (() => {
+//     return () => console.log ('mostrar')}, [])
 
 // const clickEnHome = () => {
 //     alert ('Hiciste click en home')
@@ -23,7 +26,7 @@ useEffect (() => {
 // }
 
 
-const [show, setshow] = useState (false)
+// const [show, setshow] = useState (false)
 
 // return (
 //     <nav>
@@ -41,13 +44,12 @@ const [show, setshow] = useState (false)
 
 
 return (
-    <nav>
-        <section className = "section">
-            <h5>Home</h5>
-            <h5>Listado Productos</h5>
-            <h5>Categorias</h5>
-        </section>
-    </nav>
+    <div className = "section">
+            <Home /> Home
+            <ContenedorProductos />Listado Productos
+            <ProductoCategoria />Listado Categorias
+
+    </div>
         )
 }
 
