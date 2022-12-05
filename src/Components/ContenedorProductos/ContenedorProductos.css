@@ -1,0 +1,13 @@
+.lista{
+    justify-items: center;
+    /* border: 1px;
+    border-style: solid; */
+    margin-bottom: 0px;
+    margin-left: 250px;
+    height: 100%;
+}
+
+h1 {
+    margin-left: 420px;
+    position: static;
+}

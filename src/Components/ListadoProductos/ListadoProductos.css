@@ -1,0 +1,16 @@
+
+.contenedorproductos{
+    width: 200px;
+    height: 250px;
+    margin-top: 10px;
+    margin-left: 25px;
+    display: inline-block;
+    border: 1px;
+    border-style: solid;
+    justify-items: center;
+    text-align: center;
+}
+
+.foto{
+    margin-left: 5px;
+}

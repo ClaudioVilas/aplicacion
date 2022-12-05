@@ -1,0 +1,9 @@
+.contador{
+    position: fixed;
+    width: 600px;
+    margin-left: 650px;
+    background-color: rgb(172, 41, 41);
+    text-align: center;
+    width: 600px;
+    margin-top: -200px;
+    }
