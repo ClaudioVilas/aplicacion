@@ -1,11 +1,12 @@
 import './NavBar.css'
+import Button from 'react-bootstrap/Button';
 // import Links from '../Links/Links'
 // import {useEffect, useState} from 'react'
 // import ContadorClick from '../ContadorClicks/ContadorClicks'
-import ContenedorProductos from '../ContenedorProductos/ContenedorProductos';
-import ProductoCategoria from '../ProductoCategoria/ProductoCategoria';
-import Home from '../Home/Home'
-import {BrowserRouter} from 'react-router-dom'
+// import ContenedorProductos from '../ContenedorProductos/ContenedorProductos';
+// import ProductoCategoria from '../ProductoCategoria/ProductoCategoria';
+// import Home from '../Home/Home'
+import { NavLink } from 'react-router-dom'
 
 
 const NavBar = () => {
@@ -45,9 +46,11 @@ const NavBar = () => {
 
 return (
     <div className = "section">
-        <button>Home</button>
-        <button>Listado Productos</button>
-        <button>Categoria Productos</button>
+
+        <NavLink to = '/' className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}>Home</NavLink>
+        <NavLink to = '/contenedorproductos' className={({isActive}) => isActive ? 'ActiveOption' : 'Option'} > Productos </NavLink>
+        <NavLink to = '/productoscategoria' className={({isActive}) => isActive ? 'ActiveOption' : 'Option'} > Producto Categoria </NavLink>
+        <NavLink to = '/contactanos' className={({isActive}) => isActive ? 'ActiveOption' : 'Option'} > Contactanos </NavLink>
 
     </div>
         )

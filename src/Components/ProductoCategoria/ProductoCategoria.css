@@ -1,0 +1,15 @@
+.productocategoria{
+    width: 200px;
+    height: auto;
+    margin-top: 100px;
+    margin-left: 45%;
+    display: inline-block;
+    border: 1px;
+    border-style: solid;
+    justify-items: center;
+    text-align: center;
+}
+
+.fotocategoria{
+    margin-left: 5px;
+}

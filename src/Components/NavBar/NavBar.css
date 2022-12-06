@@ -1,20 +1,49 @@
-nav{
+.section{
     display: inline-block;
     position: fixed;
     height: 100%;
-    width: 250px;
-    border: 1px;
+    width: 270px;
+    /* border: 1px;
     border-style: solid;
     text-align: center;
-    background-color: rgb(253, 253, 253);
+    font-size: 20px; */
+    /* line-height: 100px; */
 }
 
-h5{
-    padding-bottom: 25px;
-    padding-top: 25px;
+
+.ActiveOption{
+
+    background-color: #4CAF50; /* Green */
+    border-radius: 10%;
+    width: 150px;
+    height: 30px;
+    color: white;
+
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-size: 15px;
 }
 
-.section{
-    font-size: 30px;
+
+.Option{
+        background-color: #0527e7; /* Green */
+        border-radius: 10%;
+        width: 150px;
+        height: 30px;
+        color: white;
+
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        margin: 4px 2px;
+        cursor: pointer;
+        font-size: 15px;
 }
+
+
+
+
 
