@@ -1,9 +1,11 @@
-import DetalleProductoCategoria from './DetalleProductoCategoria';
+import './ItemCount.css'
 import { useEffect, useState } from 'react';
-import { getListadoById } from '../ArrayDeProductos/ArrayDeProductos';
+import { getListadoById } from '../../ArrayDeProductos/ArrayDeProductos';
 import { useParams } from 'react-router-dom';
+import ItemDetail from '../ItemDetail/ItemDetail';
 
-const ProductoCategoria = () => {
+
+const ItemCount = () => {
     const [listado, setListado] = useState ({})
 
     const params = useParams ()
@@ -18,13 +20,13 @@ const ProductoCategoria = () => {
 
 return(
     <div >
-        <DetalleProductoCategoria producto = {listado} />    
+        < ItemDetail producto = {listado} />    
     </div>
     )
 }
 
 
-export default ProductoCategoria
+export default ItemCount
 
 
 

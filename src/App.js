@@ -1,8 +1,8 @@
 import './App.css';
 import Banner from './Components/Banner/Banner';
 import NavBar from './Components/NavBar/NavBar';
-import ContenedorProductos from './Components/ContenedorProductos/ContenedorProductos';
-import ProductoCategoria from './Components/ProductoCategoria/ProductoCategoria';
+import ItemList from './Components/ItemListContainer/ItemList/ItemList'
+import ItemCount from './Components/ItemDetailContainer/ItemCount/ItemCount'
 import Home from './Components/Home/Home';
 import Contactanos from './Components/Contactanos/Contactanos';
 import {BrowserRouter, Routes, Route } from 'react-router-dom'
@@ -17,8 +17,8 @@ function App() {
         <NavBar />
           <Routes>
             <Route path = '/' element = { <Home/> } />
-            <Route path = '/contenedorproductos' element = { <ContenedorProductos /> } />
-            <Route path = '/listado/:listadoId' element = { <ProductoCategoria /> } />
+            <Route path = '/ItemListContainer' element = { < ItemList /> } />
+            <Route path = '/listado/:Id' element = { < ItemCount /> } />
             <Route path = '/contactanos' element = { <Contactanos /> } />
           </Routes>
         </BrowserRouter>

@@ -1,15 +1,16 @@
-import './ContenedorProductos.css'
+import './ItemList.css'
 import { useEffect, useState } from 'react'
-import ListadoProductos from '../ListadoProductos/ListadoProductos'
+import Item from '../Item/Item'
 // import Navbar from '../Navbar/Navbar'
 
 // cuando es un import nombrado es con este formato
-import {getListado} from '../ArrayDeProductos/ArrayDeProductos'
+import {getListado} from '../../ArrayDeProductos/ArrayDeProductos'
+// import { Form } from 'react-router-dom'
 
 
 
 
-const ContenedorProductos = () => {
+const ItemList = () => {
     const [listado, setListado] = useState ([])
 
     useEffect (() => {
@@ -26,10 +27,10 @@ return(
        {/* <h3 className = "lista2" onClick={() => setshow (!show)}>Menu De Opciones</h3>
       { show ? <Navbar /> : null } */}
         <h1>Listado De Prodcutos</h1>
-        <ListadoProductos listados = {listado} />    
+        <Item listados = {listado} />    
     </div>
     )
 }
 
 
-export default ContenedorProductos
+export default ItemList

@@ -1,9 +1,9 @@
-import './ListadoProductos.css'
+import './Item.css'
 // import { useState } from "react"
 import { Link } from 'react-router-dom'
 
 
-const ListadoProductos = ({listados}) => {
+const Item = ({listados}) => {
 
   // const [count, setCount] = useState (0)
 
@@ -28,4 +28,4 @@ const ListadoProductos = ({listados}) => {
     )    
 }
 
-export default ListadoProductos
+export default Item

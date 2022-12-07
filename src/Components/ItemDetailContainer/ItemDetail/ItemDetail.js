@@ -1,8 +1,7 @@
-import './ProductoCategoria.css'
 import { Link } from 'react-router-dom'
-import ContenedorProductos from '../ContenedorProductos/ContenedorProductos'
+import ItemCount from '../ItemCount/ItemCount'
 
-const DetalleProductoCategoria = ({producto}) => {
+const ItemDetail = ({producto}) => {
     return (
               <div className = "productocategoria">
               <img className = "fotocategoria" src = {producto.img} alt = 'logo acciones'/>
@@ -11,7 +10,7 @@ const DetalleProductoCategoria = ({producto}) => {
               <p>USD {producto.valor}</p>
               <p>{producto.desc}</p>
               <button>Comprar</button>
-              <Link to = '/contenedorproductos' element = { <ContenedorProductos /> } >Volver</Link>
+              <Link to = '/contenedorproductos' element = { < ItemCount /> } >Volver</Link>
               </div>
            )
     }
@@ -20,4 +19,4 @@ const DetalleProductoCategoria = ({producto}) => {
 
 
  
-export default DetalleProductoCategoria
+export default ItemDetail

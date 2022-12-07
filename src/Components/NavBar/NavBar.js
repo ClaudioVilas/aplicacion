@@ -48,7 +48,7 @@ return (
     <div className = "section">
 
         <NavLink to = '/' className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}>Home</NavLink>
-        <NavLink to = '/contenedorproductos' className={({isActive}) => isActive ? 'ActiveOption' : 'Option'} > Productos </NavLink>
+        <NavLink to = '/ItemListContainer' className={({isActive}) => isActive ? 'ActiveOption' : 'Option'} > Productos </NavLink>
         <NavLink to = '/productoscategoria' className={({isActive}) => isActive ? 'ActiveOption' : 'Option'} > Producto Categoria </NavLink>
         <NavLink to = '/contactanos' className={({isActive}) => isActive ? 'ActiveOption' : 'Option'} > Contactanos </NavLink>
 
