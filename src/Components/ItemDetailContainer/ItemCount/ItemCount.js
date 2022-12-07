@@ -8,13 +8,14 @@ import ItemDetail from '../ItemDetail/ItemDetail';
 const ItemCount = () => {
     const [listado, setListado] = useState ({})
 
-    const params = useParams ()
+    const {id} = useParams ()
 
     useEffect (() => {
-        getListadoById(params.listado.Id).then (response => {
-            setListado (response)
-                 }).catch(error => { console.log(error)})
-},[]); 
+        getListadoById(id).then (response => {
+            setListado (response)})
+                .catch(error =>
+                     { console.log(error)})
+},[id]); 
 
 
 

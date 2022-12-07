@@ -21,7 +21,7 @@ const Item = ({listados}) => {
               {/* <p>{listado.tipo}</p> */}
               <p>USD {listado.valor}</p>
               {/* <p>{listado.desc}</p> */}
-              <Link to = {`listado/${listado.id}`} >Ver Detalle</Link>
+              <Link to = {`/listado/${listado.id}`} >Ver Detalle</Link>
             </div>
            )) }
            </div>

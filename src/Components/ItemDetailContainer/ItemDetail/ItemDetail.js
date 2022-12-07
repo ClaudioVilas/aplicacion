@@ -14,9 +14,5 @@ const ItemDetail = ({producto}) => {
               </div>
            )
     }
-
-
-
-
  
 export default ItemDetail
