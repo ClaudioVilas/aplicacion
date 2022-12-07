@@ -35,7 +35,7 @@ const listado  = [
 export const getListadoById = (id) => {
     return new Promise ((resolve) => {
         setTimeout(() => {
-            resolve (listado.find ( listados => listados.id === id))
+            resolve (listado.find ( listados => listados.id === parseInt(id)))
                 }, 1000)
            })
 }
