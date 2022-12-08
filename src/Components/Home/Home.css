@@ -2,5 +2,28 @@
     height: 500px;
     display: inline-block;
     text-align: center;
-    margin-left: 300px;
+    margin-left: 120px;
+    margin-top: 50px;
+}
+
+.fotohome{
+    margin-top: 60px;
+    margin-left: 500px;
+}
+
+@media screen and (max-width: 375px), (max-width: 414px)
+{
+.home{
+    display: inline-block;
+        height: 250px;
+        text-align: center;
+        margin-left: -450px;
+        margin-top: 100px;
+        font-size: small;
+    }
+
+    .fotohome{
+        margin-top: 200px;
+        margin-left: 500px;
+    }
 }

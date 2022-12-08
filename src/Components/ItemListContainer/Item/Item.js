@@ -5,26 +5,17 @@ import { Link } from 'react-router-dom'
 
 const Item = ({listados}) => {
 
-  // const [count, setCount] = useState (0)
-
-  // const increment = () => {
-  //     setCount (count +1)
-  //     }
-
-
     return (
-        <div>
+          <div>
             {listados.map (listado => (
             <div className = "contenedorproductos" key = {listado.id}>
               <img className = "foto" src = {listado.img} alt = 'logo empresas'/>
-              <p>{listado.nombre}</p>
-              {/* <p>{listado.tipo}</p> */}
-              <p>USD {listado.valor}</p>
-              {/* <p>{listado.desc}</p> */}
-              <Link to = {`/listado/${listado.id}`} >Ver Detalle</Link>
+              <p className='mostrar'>{listado.nombre}</p>
+              <p className='mostrar'>USD {listado.valor}</p><br></br>
+              <button className = 'botoncards'><Link to = {`/listado/${listado.id}`} >Ver Detalle</Link></button>
             </div>
            )) }
-           </div>
+          </div>
     )    
 }
 
