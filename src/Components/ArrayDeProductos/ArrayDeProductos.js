@@ -44,7 +44,7 @@ export const getListadoById = (id) => {
 export const getListadoByTipo = (tipo) => {
     return new Promise ((resolve) => {
         setTimeout(() => {
-            resolve (listado.find ( listados => listados.tipo === (tipo)))
+            resolve (listado.filter ( listados => listados.tipo === (tipo)))
                 }, 1000)
            })
 }
