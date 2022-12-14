@@ -7,6 +7,7 @@ import Contactanos from './Components/Contactanos/Contactanos';
 import {BrowserRouter, Routes, Route } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemCount from './Components/ItemDetailContainer/ItemCount/ItemCount';
+import ItemCategory from './Components/ItemCategoryContainer/ItemCategory/ItemCategory'
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
             <Route path = '/' element = { <Home/> } />
             <Route path = '/productos' element = { < ItemList /> } />
             <Route path = '/listado/:id' element = { < ItemCount /> } />
+            <Route path = '/listado/:tipo.automotor' element = { < ItemCategory /> } />
             <Route path = '/contactanos' element = { < Contactanos /> } />
           </Routes>
         </BrowserRouter>

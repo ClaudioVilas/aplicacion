@@ -39,3 +39,12 @@ export const getListadoById = (id) => {
                 }, 1000)
            })
 }
+
+
+export const getListadoByTipo = (tipo) => {
+    return new Promise ((resolve) => {
+        setTimeout(() => {
+            resolve (listado.find ( listados => listados.tipo === (tipo)))
+                }, 1000)
+           })
+}
