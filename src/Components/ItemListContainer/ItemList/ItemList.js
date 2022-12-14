@@ -5,7 +5,7 @@ import Item from '../Item/Item'
 // import Navbar from '../Navbar/Navbar'
 
 // cuando es un import nombrado es con este formato
-import {getListado} from '../../ArrayDeProductos/ArrayDeProductos'
+import {getListado, getListadoByTipo} from '../../ArrayDeProductos/ArrayDeProductos'
 import { useParams } from 'react-router-dom'
 // import { Form } from 'react-router-dom'
 
@@ -17,10 +17,18 @@ const ItemList = () => {
     const {tipo} = useParams ()
 
     useEffect (() => {
-        getListado().then (response => {
-            setListado (response)
-                 }).catch(error => { console.log(error)})
-},[]); 
+        if (!tipo) {
+            getListado().then (response => {
+                setListado (response)
+                     }).catch(error => { console.log(error)})           
+        } else {
+            getListadoByTipo(tipo).then (response => {
+                setListado (response)
+                     }).catch(error => { console.log(error)})  
+
+
+        }
+},[tipo]); 
 
 
 // const [show, setshow] = useState (false)
