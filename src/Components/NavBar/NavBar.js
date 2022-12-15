@@ -1,20 +1,19 @@
 import './NavBar.css'
 import { NavLink } from 'react-router-dom'
+import { useState } from 'react'
+import Lista from './Lista'
 
 
 const NavBar = () => {
 
+    const [show, setshow] = useState (false)
+
 return (
     <div className = "section">
-
         <NavLink to = '/' className = {({isActive}) => isActive ? 'ActiveOption' : 'Option'}>Home</NavLink>
         <NavLink to = '/contactanos' className = {({isActive}) => isActive ? 'ActiveOption' : 'Option'} > Contactanos </NavLink>
-        <NavLink to = '/productos' className = {({isActive}) => isActive ? 'ActiveOption' : 'Option'} > Productos    </NavLink>
-        <ul>
-           <div><NavLink to = '/listado/Automotriz' className = {({isActive}) => isActive ? 'ActiveOption' : 'Option'} > Automotor </NavLink></div> 
-           <div><NavLink to = '/listado/Tecnologica' className = {({isActive}) => isActive ? 'ActiveOption' : 'Option'} > Tecnologia </NavLink></div> 
-           <div><NavLink to = '/listado/Petrolera' className = {({isActive}) => isActive ? 'ActiveOption' : 'Option'} > Petrolera </NavLink></div> 
-        </ul>
+        <NavLink to = '/productos' className = {({isActive}) => isActive ? 'ActiveOption' : 'Option'} onClick={() => setshow (!show)} > Productos </NavLink>
+        { show ? <Lista /> : null }
     </div>
         )
 }
