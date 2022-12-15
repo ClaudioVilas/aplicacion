@@ -1,11 +1,11 @@
-import './ItemCount.css'
+import './ItemDetailContainer.css'
 import { useEffect, useState } from 'react';
 import { getListadoById } from '../../ArrayDeProductos/ArrayDeProductos';
 import { useParams } from 'react-router-dom';
 import ItemDetail from '../ItemDetail/ItemDetail';
 
 
-const ItemCount = () => {
+const ItemDetailContainer = () => {
     const [listado, setListado] = useState ({})
 
     const {id} = useParams ()
@@ -27,7 +27,7 @@ return(
 }
 
 
-export default ItemCount
+export default ItemDetailContainer
 
 
 

@@ -6,7 +6,7 @@ import Home from './Components/Home/Home';
 import Contactanos from './Components/Contactanos/Contactanos';
 import {BrowserRouter, Routes, Route } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import ItemCount from './Components/ItemDetailContainer/ItemCount/ItemCount';
+import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailContainer/ItemDetailContainer'
 
 
 
@@ -19,7 +19,7 @@ function App() {
           <Routes>
             <Route path = '/' element = { <Home/> } />
             <Route path = '/productos' element = { < ItemList /> } />
-            <Route path = '/listado/:id' element = { < ItemCount /> } />
+            <Route path = '/listado/:id' element = { < ItemDetailContainer /> } />
             <Route path = '/categoria/:tipo' element = { < ItemList /> } />
             <Route path = '/contactanos' element = { < Contactanos /> } />
           </Routes>
