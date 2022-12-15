@@ -25,8 +25,6 @@ const ItemList = () => {
             getListadoByTipo(tipo).then (response => {
                 setListado (response)
                      }).catch(error => { console.log(error)})  
-
-
         }
 },[tipo]); 
 

@@ -20,7 +20,7 @@ function App() {
             <Route path = '/' element = { <Home/> } />
             <Route path = '/productos' element = { < ItemList /> } />
             <Route path = '/listado/:id' element = { < ItemCount /> } />
-            <Route path = '/listado/:tipo' element = { < ItemCount /> } />
+            <Route path = '/categoria/:tipo' element = { < ItemList /> } />
             <Route path = '/contactanos' element = { < Contactanos /> } />
           </Routes>
         </BrowserRouter>
