@@ -12,6 +12,21 @@
     font-size: 15px;
 }
 
+
+.botonreset{
+    background-color: #0527e7; /* Green */
+    border-radius: 10%;
+    width: 100px;
+    height: 30px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
 .input {
     width: 50px;
 }

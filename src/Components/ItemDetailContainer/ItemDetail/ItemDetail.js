@@ -1,6 +1,7 @@
 import './ItemDetail.css'
 import { Link } from 'react-router-dom'
 import ItemCount from '../ItemDetailContainer/ItemDetailContainer'
+import ContadorClick from '../../ContadorClicks/ContadorClicks'
 
 const ItemDetail = ({producto}) => {
     return (
@@ -12,8 +13,9 @@ const ItemDetail = ({producto}) => {
                     <p>{producto.tipo}</p>
                     <p>USD {producto.valor}</p>
                     <p>{producto.desc}</p>
-                    <input className = 'input' type = 'number' ></input><button className = 'boton'>Comprar</button>
-                    <Link className = 'boton' to = '/productos' element = { < ItemCount /> } >Volver</Link>
+                    <ContadorClick/>
+                    <button className = 'boton'>Comprar</button>
+                    <Link className = 'boton' to = '/productos' element = { < ItemDetail /> } >Volver</Link>
                 </div>
         </div>
            )
