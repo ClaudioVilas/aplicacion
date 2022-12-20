@@ -14,12 +14,23 @@ export const FavoritoContext = createContext ()
 
 function App() {
 
-const [favoritos, setFavoritos] = useState (['1', '2', '3'])
+const [favoritos, setFavoritos] = useState ([])
+
+const addFavorito = (listadoToAdd) =>{
+  
+  if (!isInFavoritos(listadoToAdd.id)){
+    setFavoritos([...favoritos, listadoToAdd])
+  }
+}
+
+const isInFavoritos = (id) => {
+  return favoritos.some( favoritos => favoritos.id === id)
+}
 
 
   return (
     <div className="App">
-      <FavoritoContext.Provider value = {{favoritos, setFavoritos}}>
+      <FavoritoContext.Provider value = {{ favoritos, addFavorito }}>
       <BrowserRouter>
         <NavBar />
         <Banner greeting = 'Bienvenidos a CV Finanzas' />

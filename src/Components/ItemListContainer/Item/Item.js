@@ -6,7 +6,9 @@ import { FavoritoContext } from '../../../App';
 
 
 const Item = ({listados}) => {
-  const { favorito, setFavoritos} = useContext (FavoritoContext)
+
+  const { addFavorito } = useContext (FavoritoContext)
+
     return (
           <div>
             {listados.map (listado => (
@@ -15,7 +17,7 @@ const Item = ({listados}) => {
               <p className='mostrar'>{listado.nombre}</p>
               <p className='mostrar'>USD {listado.valor}</p><br></br>
               <button className = 'botoncards'><Link to = {`/listado/${listado.id}`} >Ver Detalle</Link></button>
-              <img  onClick = { ()=> { setFavoritos ([...favorito, listado.id]) } } src = {'./imagenes/botonfavorito.jpg'} className = 'favorito'></img>
+              <img  onClick = { ()=> { addFavorito (listado) } } src = {'./imagenes/botonfavorito.jpg'} className = 'favorito'></img>
             </div>
            )) }
           </div>
