@@ -1,14 +1,12 @@
-.home{
-    height: 500px;
-    display: inline-block;
-    text-align: center;
-    margin-left: 120px;
-    margin-top: 50px;
-}
 
 .fotohome{
     margin-top: 60px;
-    margin-left: 500px;
+    margin-left: 800px;
+}
+
+h1{
+    margin-left: -10px;
+    text-align: center;
 }
 
 @media screen and (max-width: 375px), (max-width: 414px)

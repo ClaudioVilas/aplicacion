@@ -7,15 +7,22 @@ import Contactanos from './Components/Contactanos/Contactanos';
 import {BrowserRouter, Routes, Route } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailContainer/ItemDetailContainer'
+import {createContext, useState} from 'react'
 
 
+export const FavoritoContext = createContext ()
 
 function App() {
+
+const [favoritos, setFavoritos] = useState (['1', '2', '3'])
+
+
   return (
     <div className="App">
+      <FavoritoContext.Provider value = {{favoritos, setFavoritos}}>
       <BrowserRouter>
-        <Banner greeting = 'Bienvenidos a CV Finanzas' />
         <NavBar />
+        <Banner greeting = 'Bienvenidos a CV Finanzas' />
           <Routes>
             <Route path = '/' element = { <Home/> } />
             <Route path = '/productos' element = { < ItemList /> } />
@@ -24,6 +31,8 @@ function App() {
             <Route path = '/contactanos' element = { < Contactanos /> } />
           </Routes>
         </BrowserRouter>
+        </FavoritoContext.Provider>
+
     </div>
   );
 }

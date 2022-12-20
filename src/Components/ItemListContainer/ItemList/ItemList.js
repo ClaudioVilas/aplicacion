@@ -2,6 +2,7 @@ import './ItemList.css'
 import { useEffect, useState } from 'react'
 import Item from '../Item/Item'
 
+
 // import Navbar from '../Navbar/Navbar'
 
 // cuando es un import nombrado es con este formato
@@ -15,6 +16,7 @@ import { useParams } from 'react-router-dom'
 const ItemList = () => {
     const [listado, setListado] = useState ([])
     const {tipo} = useParams ()
+    
 
     useEffect (() => {
         if (!tipo) {
@@ -36,7 +38,7 @@ return(
        {/* <h3 className = "lista2" onClick={() => setshow (!show)}>Menu De Opciones</h3>
       { show ? <Navbar /> : null } */}
         <h1>Listado De Prodcutos</h1>
-        <Item listados = {listado} />    
+        <Item listados = {listado} />  
     </div>
     )
 }

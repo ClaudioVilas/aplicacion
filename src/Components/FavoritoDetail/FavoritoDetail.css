@@ -1,0 +1,10 @@
+.botonfavorito{
+    margin-top: 20px;
+    width: 35px;
+    height: 35px;
+}
+
+.numerofavoritos{
+    display: inline;
+    font-size: x-large;
+}

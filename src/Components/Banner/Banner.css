@@ -1,11 +1,15 @@
+.cabeceras {
+    display: inline-flex;
+}
+ 
 .cabecerah1{
-    margin-left: 635px;
-    display: inline-block;
+    display: inline-flex;
 }
 
-
-.botoncarrito{
-    margin-left: 400px;
+.botonfavo{
+    display: inline-flex;
+    width: 50px;
+    height: 50px;
 }
 
 
@@ -21,6 +25,8 @@
 .botoncarrito{
     margin-left: 30px;
 }
+
+
 
 
 }

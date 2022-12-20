@@ -2,18 +2,14 @@
     display: inline-block;
     position: fixed;
     height: 100%;
-    width: 270px;
-    margin-top: 150px;
-    /* border: 1px;
-    border-style: solid;
-    text-align: center;
-    font-size: 20px; */
-    /* line-height: 100px; */
+    width: 250px;
+    margin-top: 250px;
 }
 
 
 .ActiveOption{
 
+    display: inline-block;
     background-color: #4CAF50; /* Green */
     border-radius: 10%;
     width: 250px;
@@ -21,7 +17,6 @@
     color: white;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
     margin: 4px 2px;
     cursor: pointer;
     font-size: 40px;
@@ -30,6 +25,7 @@
 
 
 .Option{
+
         background-color: #0527e7; /* Green */
         border-radius: 10%;
         width: 250px;
@@ -52,9 +48,9 @@
         display: inline-block;
         position: fixed;
         grid-template-rows: 100px;
-        width: 300px;
+        width: 30px;
         height: 0px;
-        margin-top: 20px;
+        margin-top: 150px;
         margin-left: 40px;
 
         /* border: 1px;
