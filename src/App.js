@@ -8,6 +8,7 @@ import {BrowserRouter, Routes, Route } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailContainer/ItemDetailContainer'
 import {createContext, useState} from 'react'
+import Favoritos from './Components/FavoritoDetail/FavoritoDetail';
 
 
 export const FavoritoContext = createContext ()
@@ -27,6 +28,10 @@ const isInFavoritos = (id) => {
   return favoritos.some( favoritos => favoritos.id === id)
 }
 
+// const removeFavoritos = (id) => {
+//   const upDateFavoritos = favoritos.filter (favoritos => favoritos.id !== id)
+//   setFavoritos(upDateFavoritos )
+// }
 
   return (
     <div className="App">
@@ -40,6 +45,7 @@ const isInFavoritos = (id) => {
             <Route path = '/listado/:id' element = { < ItemDetailContainer /> } />
             <Route path = '/categoria/:tipo' element = { < ItemList /> } />
             <Route path = '/contactanos' element = { < Contactanos /> } />
+            <Route path = '/favoritos' element = { < Favoritos /> } />
           </Routes>
         </BrowserRouter>
         </FavoritoContext.Provider>

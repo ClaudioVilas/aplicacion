@@ -1,6 +1,5 @@
 import './ItemDetail.css'
 import { Link } from 'react-router-dom'
-import ItemCount from '../ItemDetailContainer/ItemDetailContainer'
 import ContadorClick from '../../ContadorClicks/ContadorClicks'
 
 const ItemDetail = ({producto}) => {
