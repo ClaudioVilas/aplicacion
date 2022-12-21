@@ -7,35 +7,17 @@ import Contactanos from './Components/Contactanos/Contactanos';
 import {BrowserRouter, Routes, Route } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailContainer/ItemDetailContainer'
-import {createContext, useState} from 'react'
 import Favoritos from './Components/FavoritoDetail/FavoritoDetail';
+import { FavoritosProvaider } from './Components/ContextProvider/ContextProvider';
 
 
-export const FavoritoContext = createContext ()
 
 function App() {
 
-const [favoritos, setFavoritos] = useState ([])
-
-const addFavorito = (listadoToAdd) =>{
-  
-  if (!isInFavoritos(listadoToAdd.id)){
-    setFavoritos([...favoritos, listadoToAdd])
-  }
-}
-
-const isInFavoritos = (id) => {
-  return favoritos.some( favoritos => favoritos.id === id)
-}
-
-// const removeFavoritos = (id) => {
-//   const upDateFavoritos = favoritos.filter (favoritos => favoritos.id !== id)
-//   setFavoritos(upDateFavoritos )
-// }
 
   return (
     <div className="App">
-      <FavoritoContext.Provider value = {{ favoritos, addFavorito }}>
+      <FavoritosProvaider>
       <BrowserRouter>
         <NavBar />
         <Banner greeting = 'Bienvenidos a CV Finanzas' />
@@ -48,7 +30,7 @@ const isInFavoritos = (id) => {
             <Route path = '/favoritos' element = { < Favoritos /> } />
           </Routes>
         </BrowserRouter>
-        </FavoritoContext.Provider>
+        </FavoritosProvaider>
 
     </div>
   );

@@ -1,7 +1,7 @@
 import './Banner.css'
 import { useContext } from 'react'
-import { FavoritoContext } from '../../App'
 import { Link } from 'react-router-dom'
+import { FavoritoContext } from '../ContextProvider/ContextProvider'
 
 
 const Banner = (props) => {
