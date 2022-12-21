@@ -13,7 +13,7 @@ const ItemDetail = ({producto, listado}) => {
         <div>
             <h1 className = 'titulo'>Detalle del producto</h1>
                 <div className = "productocategoria">
-                    <img  onClick = { ()=> { addFavorito (listado) } } src = {'./imagenes/botonfavorito.jpg'} className = 'favoritoitemdetail' ></img>
+                    <img  onClick = { ()=> { addFavorito (listado) } } src = {'./imagenes/botonfavorito.jpg'} className = 'favoritoitemdetail' />
                     <img className = "fotocategoria" src = {producto.img} alt = 'logo acciones'/>
                     <p>{producto.nombre}</p>
                     <p>{producto.tipo}</p>

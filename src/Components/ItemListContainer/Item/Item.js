@@ -8,7 +8,6 @@ import { FavoritoContext } from '../../ContextProvider/ContextProvider';
 const Item = ({listados}) => {
 
   const { addFavorito, removeFavoritos, isInFavoritos } = useContext (FavoritoContext)
-  // const isAdded = isInFavoritos (favoritos.id)
 
     return (
           <div>
@@ -18,10 +17,8 @@ const Item = ({listados}) => {
               <p className='mostrar'>{listado.nombre}</p>
               <p className='mostrar'>USD {listado.valor}</p><br></br>
               <button className = 'botoncards'><Link to = {`/listado/${listado.id}`} >Ver Detalle</Link></button>
-              <img  onClick = { ()=> { addFavorito (listado) } } src = {!favorito ? './imagenes/botonfavorito.jpg' : './imagenes/agregadofavoritos.jpg'} className = 'favorito' />
-              {/* <img  onClick = { ()=> { addFavorito (listado) } } src = {'./imagenes/botonfavorito.jpg'} className = 'favorito' ></img> */}
-
-            </div>
+              <img  onClick = { ()=> { isInFavoritos (listado.id) ? removeFavoritos (listado.id) : addFavorito (listado) } } src = { isInFavoritos(listado.id) ? './imagenes/agregadofavoritos.jpg' : './imagenes/botonfavorito.jpg' } className = 'favorito' />
+           </div>
            )) }
           </div>
     )    
