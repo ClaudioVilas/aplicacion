@@ -9,6 +9,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailContainer/ItemDetailContainer'
 import Favoritos from './Components/FavoritoDetail/FavoritoDetail';
 import { FavoritoProvider } from './Components/ContextProvider/FavoritoProvider'
+import CarritoDeCompra from './Components/CarritoDeCompra/CarritoDeCompra'
+import { CarritoDeCompraProvider } from './Components/ContextProvider/CarritoDeCompraProvider'
+
 
 
 function App() {
@@ -16,20 +19,23 @@ function App() {
 
   return (
     <div className="App">
-      <FavoritoProvider>
-      <BrowserRouter>
-        <NavBar />
-        <Banner greeting = 'Bienvenidos a CV Finanzas' />
-          <Routes>
-            <Route path = '/' element = { <Home/> } />
-            <Route path = '/productos' element = { < ItemList /> } />
-            <Route path = '/listado/:id' element = { < ItemDetailContainer /> } />
-            <Route path = '/categoria/:tipo' element = { < ItemList /> } />
-            <Route path = '/contactanos' element = { < Contactanos /> } />
-            <Route path = '/favoritos' element = { < Favoritos /> } />
-          </Routes>
-        </BrowserRouter>
-        </FavoritoProvider>
+      <CarritoDeCompraProvider>
+        <FavoritoProvider>
+        <BrowserRouter>
+          <NavBar />
+          <Banner greeting = 'Bienvenidos a CV Finanzas' />
+            <Routes>
+              <Route path = '/' element = { <Home/> } />
+              <Route path = '/productos' element = { < ItemList /> } />
+              <Route path = '/listado/:id' element = { < ItemDetailContainer /> } />
+              <Route path = '/categoria/:tipo' element = { < ItemList /> } />
+              <Route path = '/contactanos' element = { < Contactanos /> } />
+              <Route path = '/favoritos' element = { < Favoritos /> } />
+              <Route path = '/CarritoDeCompra' element = { < CarritoDeCompra /> } />
+            </Routes>
+          </BrowserRouter>
+          </FavoritoProvider>
+        </CarritoDeCompraProvider>
 
     </div>
   );

@@ -3,11 +3,13 @@ import { Link } from 'react-router-dom'
 import ContadorClick from '../../ContadorClicks/ContadorClicks'
 import { useContext } from 'react'
 import { FavoritoContext } from '../../ContextProvider/FavoritoProvider'
+import { CartContext } from '../../ContextProvider/CarritoDeCompraProvider'
 
 
 const ItemDetail = ({producto}) => {
 
     const { addFavorito, removeFavoritos, isInFavoritos } = useContext (FavoritoContext)
+    const { cart, addCart } = useContext (CartContext)
 
     return (
         <div>
@@ -20,7 +22,7 @@ const ItemDetail = ({producto}) => {
                     <p>USD {producto.valor}</p>
                     <p>{producto.desc}</p>
                     <ContadorClick/>
-                    <button className = 'boton'>Agregar Al Carrito</button>
+                    <button  onClick = {() => {addCart (cart) } } className = 'boton' > Agregar Al Carrituuuu</button>
                     <Link className = 'boton' to = '/productos' >Volver</Link>
                 </div>
         </div>
