@@ -4,9 +4,14 @@ import { useContext } from 'react'
 import { FavoritoContext } from '../../ContextProvider/FavoritoProvider'
 
 
-const ItemDetail = ({producto}) => {
+const ItemDetail = ({producto, id, nombre }) => {
 
     const { addFavorito, removeFavoritos, isInFavoritos } = useContext (FavoritoContext)
+
+    const handleOnAdd = (quantity) => {
+        ('Se agrego al carrito' +  quantity) 
+
+    }
 
     return (
         <div>
@@ -18,7 +23,7 @@ const ItemDetail = ({producto}) => {
                     <p>{producto.tipo}</p>
                     <p>USD {producto.valor}</p>
                     <p>{producto.desc}</p>
-                    <ContadorClick/>
+                    <ContadorClick onAdd = {handleOnAdd} />
                 </div>
         </div>
            )

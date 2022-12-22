@@ -22,8 +22,16 @@ const removeCart = (id) => {
 }
 
 
+const getQuantity = () => {
+  let totalQuantity = 0
+    cart.forEach (product =>{
+      totalQuantity += product.quantity
+    })
+    return totalQuantity
+}
+
 return (
-    <CartContext.Provider value = {{ cart, addCart, removeCart, isInCart }}>
+    <CartContext.Provider value = {{ cart, addCart, removeCart, isInCart, getQuantity }}>
         {children}
     </CartContext.Provider>
 )

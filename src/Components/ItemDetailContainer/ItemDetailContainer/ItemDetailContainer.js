@@ -9,12 +9,11 @@ import ItemDetail from '../ItemDetail/ItemDetail';
 const ItemDetailContainer = () => {
     const [listado, setListado] = useState ({})
     const {id} = useParams ()
-
-    useEffect (() => {
-        getListadoById(id).then (response => {
-            setListado (response)})
-                .catch(error =>
-                     { console.log(error)})
+        useEffect (() => {
+            getListadoById(id).then (response => {
+                setListado (response)})
+                    .catch(error =>
+                        { console.log(error)})
 },[id]); 
 
 
