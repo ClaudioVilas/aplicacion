@@ -5,12 +5,8 @@ import Item from '../Item/Item'
 
 // import Navbar from '../Navbar/Navbar'
 
-// cuando es un import nombrado es con este formato
 import {getListado, getListadoByTipo} from '../../ArrayDeProductos/ArrayDeProductos'
 import { useParams } from 'react-router-dom'
-// import { Form } from 'react-router-dom'
-
-
 
 
 const ItemList = () => {

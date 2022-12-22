@@ -6,19 +6,18 @@ export const CarritoDeCompraProvider = ({children}) => {
 
 const [cart, setCart] = useState ([])
 
-const addCart = (listadoToAdd) =>{
-  
-  if (!isInCart(listadoToAdd.id)){
-    setCart([...cart, listadoToAdd])
+const addCart = (productoToAdd) =>{
+  if (!isInCart(productoToAdd.id)){
+    setCart([...cart, productoToAdd])
   }
 }
 
 const isInCart = (id) => {
-  return cart.some( cart => cart.id === id)
+  return cart.some( producto => producto.id === id)
 }
 
 const removeCart = (id) => {
-  const upDateCart = cart.filter (cart => cart.id !== id)
+  const upDateCart = cart.filter (producto => producto.id !== id)
   setCart( upDateCart )
 }
 

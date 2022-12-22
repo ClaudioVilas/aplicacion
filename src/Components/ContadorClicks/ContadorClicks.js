@@ -1,5 +1,7 @@
 import './ContadorClicks.css'
-import { useState } from "react"
+import { useState, useContext } from "react"
+import { CartContext } from '../ContextProvider/CarritoDeCompraProvider'
+import { Link } from 'react-router-dom'
 
 const ContadorClick = () => {
 const [count, setCount] = useState(1)
@@ -33,14 +35,16 @@ const reset = () => {
 //             }
 
 
+const { cart, addCart } = useContext (CartContext)
+
 return (
     <div className='contador'>
-        {/* <h6>Contador De clicks</h6> */}
-        {/* <h6>{titulo}</h6> */}
         <h6>{count}</h6>
         <button onClick = {() => increment()}> + </button>
         <button onClick = {() => resta()}> - </button>
         <button className = 'botonreset' onClick = {() => reset()}>Reset</button>
+        <button  onClick = {() => {addCart (cart) } } className = 'boton' >Agregar Al Carrito</button>
+        <Link className = 'boton' to = '/productos'>Volver</Link> 
         {/* <button onClick = {() => incrementaldea5()}>Sumar De a 5</button> */}
         {/* <button onClick = {() => reduceedea5()}>Resta De a 5</button> */}
     </div>
