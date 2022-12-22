@@ -8,8 +8,7 @@ import {BrowserRouter, Routes, Route } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailContainer/ItemDetailContainer'
 import Favoritos from './Components/FavoritoDetail/FavoritoDetail';
-import { FavoritosProvaider } from './Components/ContextProvider/ContextProvider';
-
+import { FavoritoProvider } from './Components/ContextProvider/FavoritoProvider'
 
 
 function App() {
@@ -17,7 +16,7 @@ function App() {
 
   return (
     <div className="App">
-      <FavoritosProvaider>
+      <FavoritoProvider>
       <BrowserRouter>
         <NavBar />
         <Banner greeting = 'Bienvenidos a CV Finanzas' />
@@ -30,7 +29,7 @@ function App() {
             <Route path = '/favoritos' element = { < Favoritos /> } />
           </Routes>
         </BrowserRouter>
-        </FavoritosProvaider>
+        </FavoritoProvider>
 
     </div>
   );

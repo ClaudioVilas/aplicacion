@@ -2,18 +2,18 @@ import './ItemDetail.css'
 import { Link } from 'react-router-dom'
 import ContadorClick from '../../ContadorClicks/ContadorClicks'
 import { useContext } from 'react'
-import { FavoritoContext } from '../../ContextProvider/ContextProvider'
+import { FavoritoContext } from '../../ContextProvider/FavoritoProvider'
 
 
-const ItemDetail = ({producto, listado}) => {
+const ItemDetail = ({producto}) => {
 
-    const { addFavorito } = useContext (FavoritoContext)
+    const { addFavorito, removeFavoritos, isInFavoritos } = useContext (FavoritoContext)
 
     return (
         <div>
             <h1 className = 'titulo'>Detalle del producto</h1>
                 <div className = "productocategoria">
-                    <img  onClick = { ()=> { addFavorito (listado) } } src = {'./imagenes/botonfavorito.jpg'} className = 'favoritoitemdetail' />
+                    <img  onClick = { ()=> { isInFavoritos (producto.id) ? removeFavoritos (producto.id) : addFavorito (producto) } } src = { isInFavoritos(producto.id) ? '/imagenes/agregadofavoritos.jpg' : '/imagenes/botonfavorito.jpg' } className = 'favoritoitemdetail' />
                     <img className = "fotocategoria" src = {producto.img} alt = 'logo acciones'/>
                     <p>{producto.nombre}</p>
                     <p>{producto.tipo}</p>

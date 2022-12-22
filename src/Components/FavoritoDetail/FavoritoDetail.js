@@ -1,8 +1,7 @@
 import './FavoritoDetail.css'
 import { useContext } from "react"
 import { Link } from "react-router-dom"
-import { FavoritoContext } from '../ContextProvider/ContextProvider'
-import ItemDetail from '../ItemDetailContainer/ItemDetail/ItemDetail'
+import { FavoritoContext } from '../ContextProvider/FavoritoProvider'
 import ContadorClick from '../ContadorClicks/ContadorClicks'
 
 const Favoritos = () => {

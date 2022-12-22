@@ -1,7 +1,7 @@
 import './Item.css'
 import { useContext } from "react"
 import { Link } from 'react-router-dom'
-import { FavoritoContext } from '../../ContextProvider/ContextProvider';
+import { FavoritoContext } from '../../ContextProvider/FavoritoProvider';
 
 
 
