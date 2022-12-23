@@ -2,22 +2,26 @@ import './ItemDetail.css'
 import ContadorClick from '../../ContadorClicks/ContadorClicks'
 import { useContext } from 'react'
 import { FavoritoContext } from '../../ContextProvider/FavoritoProvider'
+import { CartContext } from '../../ContextProvider/CarritoDeCompraProvider'
 
 
 const ItemDetail = ({producto, id, nombre }) => {
 
+    const { addCart } = useContext (CartContext)
+
     const { addFavorito, removeFavoritos, isInFavoritos } = useContext (FavoritoContext)
 
-    const handleOnAdd = (quantity) => {
-        ('Se agrego al carrito' +  quantity) 
+    const handleOnAdd = ( quantity ) => {
+        'Se agrego al carrito' (+  quantity)
 
+        addCart ({id, nombre})
     }
 
     return (
         <div>
             <h1 className = 'titulo'>Detalle del producto</h1>
                 <div className = "productocategoria">
-                    <img  onClick = { ()=> { isInFavoritos (producto.id) ? removeFavoritos (producto.id) : addFavorito (producto) } } src = { isInFavoritos(producto.id) ? '/imagenes/agregadofavoritos.jpg' : '/imagenes/botonfavorito.jpg' } className = 'favoritoitemdetail' />
+                    <img  onClick = { ()=> { isInFavoritos (producto.id) ? removeFavoritos (producto.id) : addFavorito (producto) } } src = { isInFavoritos(producto.id) ? '/imagenes/agregadofavoritos.jpg' : '/imagenes/botonfavorito.jpg' } className = 'favoritoitemdetail' alt = 'imagenfavorito'/>
                     <img className = "fotocategoria" src = {producto.img} alt = 'logo acciones'/>
                     <p>{producto.nombre}</p>
                     <p>{producto.tipo}</p>
