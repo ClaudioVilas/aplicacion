@@ -12,10 +12,11 @@ const ItemDetail = ({producto, id, nombre }) => {
     const { addFavorito, removeFavoritos, isInFavoritos } = useContext (FavoritoContext)
 
     const handleOnAdd = ( quantity ) => {
-        'Se agrego al carrito' (+  quantity)
+        console.log ('Se agrego al carrito' +  quantity)
 
-        addCart ({id, nombre})
+        addCart ({producto, quantity})
     }
+
 
     return (
         <div>

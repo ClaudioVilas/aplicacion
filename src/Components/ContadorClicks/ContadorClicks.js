@@ -1,9 +1,9 @@
 import './ContadorClicks.css'
-import { useState, useContext } from "react"
-import { CartContext } from '../ContextProvider/CarritoDeCompraProvider'
+import { useState } from "react"
+// import { CartContext } from '../ContextProvider/CarritoDeCompraProvider'
 import { Link } from 'react-router-dom'
 
-const ContadorClick = (onAdd) => {
+const ContadorClick = ({onAdd}) => {
     const [count, setCount] = useState(1)
     // const { cart, addCart } = useContext (CartContext)
 
