@@ -7,13 +7,15 @@ import { CartContext } from '../ContextProvider/CarritoDeCompraProvider'
 const Banner = (props) => {
 
     const { favoritos } = useContext (FavoritoContext)
-    const { cart } = useContext (CartContext)
+    // const { cart } = useContext (CartContext)
+    const { getQuantity } = useContext (CartContext)
 
     return (
         <div className = "cabeceras">
             <h1 className = "cabecerah1">{props.greeting}</h1>
             <Link to = '/CarritoDeCompra' > <img className = "botoncarrito" src = {'/imagenes/logocarrtio.jpg'} alt = 'imagen-carrito'/> </Link>
-            <p className='numerofavoritos' > {cart.length} </p>
+            {/* <p className='numerofavoritos' > {cart.length} </p> */}
+            <p className='numerofavoritos' > {getQuantity()} </p>
             <Link to = '/favoritos' > <img className = 'botonfavo' src = {'/imagenes/botonfavorito.jpg'} /> </Link>
             <p className='numerofavoritos' > {favoritos.length} </p>
         </div>

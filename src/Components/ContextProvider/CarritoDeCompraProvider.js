@@ -6,11 +6,20 @@ export const CarritoDeCompraProvider = ({children}) => {
 
 const [cart, setCart] = useState ([])
 
+// const addCart = (productoToAdd) =>{
+//   console.log(productoToAdd)
+//   if (!isInCart(productoToAdd.id)){
+//     setCart([...cart, productoToAdd])
+//   }
+// }
+
+
 const addCart = (productoToAdd) =>{
   if (!isInCart(productoToAdd.id)){
     setCart([...cart, productoToAdd])
-  }
+  }else{}
 }
+
 
 const isInCart = (id) => {
   return cart.some( producto => producto.id === id)
